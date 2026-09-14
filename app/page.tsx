@@ -1,11 +1,16 @@
 import CoffeeMug from "./_components/CoffeeMug";
+import Farms from "./_components/Farms";
+import Footer from "./_components/Footer";
 import HowItWorks from "./_components/HowItWorks";
 import Nav from "./_components/Nav";
+import Subscribe from "./_components/Subscribe";
+import TasteNotes from "./_components/TasteNotes";
+import Testimonials from "./_components/Testimonials";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col">
-      <section className="relative overflow-hidden">
+    <main className="flex flex-1 flex-col">
+      <section id="roast" className="relative overflow-hidden">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-36 -top-48 h-[420px] w-[420px] rounded-full bg-accent-2-200 sm:-right-52 sm:-top-64 sm:h-[600px] sm:w-[600px]"
@@ -32,9 +37,7 @@ export default function Home() {
               <button type="button" className="btn btn-primary">
                 Pick my roast
               </button>
-              <button type="button" className="btn btn-secondary">
-                Taste notes
-              </button>
+              <TasteNotes />
             </div>
             <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.06em] text-accent-700 sm:mt-8 sm:text-[12.5px]">
               Free shipping &middot; pause anytime
@@ -48,6 +51,10 @@ export default function Home() {
       </section>
 
       <HowItWorks />
-    </div>
+      <Farms />
+      <Testimonials />
+      <Subscribe />
+      <Footer />
+    </main>
   );
 }

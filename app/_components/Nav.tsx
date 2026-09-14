@@ -12,10 +12,16 @@ export default function Nav() {
         <a href="#farms" className="hover:text-accent-700">
           Our farms
         </a>
+        <a href="#testimonials" className="hover:text-accent-700">
+          Testimonials
+        </a>
       </div>
-      <button type="button" className="btn btn-primary hidden md:inline-flex">
+      <a
+        href="#subscribe"
+        className="btn btn-primary hidden md:inline-flex"
+      >
         Start a subscription
-      </button>
+      </a>
     </nav>
   );
 }

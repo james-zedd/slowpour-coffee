@@ -2,11 +2,11 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
-const brewOptions = ["Drip", "Pour-over", "Espresso", "French press"] as const;
-const grindOptions = ["Extra-fine", "Fine", "Medium", "Coarse"] as const;
-const frequencyOptions = ["Weekly", "Biweekly", "Monthly"] as const;
+const roastOptions = ["Light", "Medium", "Dark", "Extra Dark"] as const;
+const grindOptions = ["Extra Fine", "Fine", "Medium", "Coarse"] as const;
+const frequencyOptions = ["Weekly", "Bi-weekly", "Monthly"] as const;
 
-type Brew = (typeof brewOptions)[number];
+type Roast = (typeof roastOptions)[number];
 type Grind = (typeof grindOptions)[number];
 type Frequency = (typeof frequencyOptions)[number];
 
@@ -14,7 +14,7 @@ export default function Subscribe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-  const [brew, setBrew] = useState<Brew>("Drip");
+  const [roast, setRoast] = useState<Roast>("Medium");
   const [grind, setGrind] = useState<Grind>("Medium");
   const [frequency, setFrequency] = useState<Frequency>("Weekly");
   const [submitted, setSubmitted] = useState(false);
@@ -39,7 +39,7 @@ export default function Subscribe() {
   return (
     <section
       id="subscribe"
-      className="relative overflow-hidden px-6 py-16 sm:px-14 sm:py-24"
+      className="relative overflow-hidden px-6 py-16 sm:px-14 sm:py-24 bg-surface"
     >
       <div
         aria-hidden
@@ -88,12 +88,11 @@ export default function Subscribe() {
           {submitted ? (
             <div className="flex flex-col gap-2 py-6 text-center">
               <span className="font-heading text-[22px]">
-                You&apos;re on the list.
+                Thanks for filling out this form, {name || "friend"}!
               </span>
               <p className="text-[13.5px] leading-[1.6] text-neutral-800">
-                We&apos;ll email {email || "you"} to confirm your first
-                roast — {brew.toLowerCase()}, {grind.toLowerCase()} grind,{" "}
-                {frequency.toLowerCase()}.
+                This is a fictional subscription form, so we will not actually be sending you coffee. But if we were, we would send it to {address || "the address you provided"} and email you at{" "}
+                {email || "the email you provided"}.
               </p>
             </div>
           ) : (
@@ -144,15 +143,15 @@ export default function Subscribe() {
               </div>
 
               <div className="field">
-                <span>How do you brew?</span>
-                <div className="seg" role="group" aria-label="Brew method">
-                  {brewOptions.map((option) => (
+                <span>What roast do you prefer?</span>
+                <div className="seg" role="group" aria-label="Roast level">
+                  {roastOptions.map((option) => (
                     <button
                       key={option}
                       type="button"
                       className="seg-option"
-                      aria-pressed={brew === option}
-                      onClick={() => setBrew(option)}
+                      aria-pressed={roast === option}
+                      onClick={() => setRoast(option)}
                     >
                       {option}
                     </button>

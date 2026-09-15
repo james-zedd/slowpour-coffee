@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${caprasimo.variable} ${figtree.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg font-body text-text">
+      <body className="min-h-full flex flex-col font-body text-text">
         {children}
       </body>
     </html>

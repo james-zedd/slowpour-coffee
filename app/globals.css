@@ -72,8 +72,13 @@
 }
 
 body {
-  background: var(--color-bg);
   color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 :focus-visible {

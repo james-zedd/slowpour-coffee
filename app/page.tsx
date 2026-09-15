@@ -1,4 +1,4 @@
-import CoffeeMug from "./_components/CoffeeMug";
+import CoffeeMug from "./_components/svgs/CoffeeMug";
 import Farms from "./_components/Farms";
 import Footer from "./_components/Footer";
 import HowItWorks from "./_components/HowItWorks";

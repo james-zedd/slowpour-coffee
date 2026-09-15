@@ -1,3 +1,5 @@
+import StarIcon from "./svgs/StarIcon";
+
 type Testimonial = {
   quote: string;
   name: string;
@@ -29,15 +31,7 @@ function StarRating() {
   return (
     <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          viewBox="0 0 24 24"
-          className="h-[15px] w-[15px] sm:h-[17px] sm:w-[17px]"
-          fill="var(--color-accent-500)"
-          aria-hidden
-        >
-          <path d="M12 2.5l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.9-6.2 3.9 1.6-7-5.4-4.7 7.1-.6z" />
-        </svg>
+        <StarIcon key={i} />
       ))}
     </div>
   );

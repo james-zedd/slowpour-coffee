@@ -2,6 +2,8 @@
 
 import { useRef, type MouseEvent } from "react";
 
+import CloseIcon from "./svgs/CloseIcon";
+
 type Note = {
   term: string;
   description: string;
@@ -19,11 +21,6 @@ const notes: Note[] = [
       "Warm and rounded, like roasted almond, hazelnut, or dark chocolate. Common in medium roasts.",
   },
   {
-    term: "Floral",
-    description:
-      "Light and fragrant, closer to jasmine or dried flowers than fruit. Shows up most in delicate, high-grown beans.",
-  },
-  {
     term: "Caramelized & Sweet",
     description:
       "Brown sugar, toffee, maple — the sweetness that develops as beans roast past first crack.",
@@ -36,7 +33,7 @@ const notes: Note[] = [
   {
     term: "Earthy",
     description:
-      "Deep and rustic — tobacco, cedar, damp soil. Typical of darker roasts and certain origins.",
+      "Deep and rustic — tobacco, cedar, damp soil. Typical of darker roasts.",
   },
 ];
 
@@ -83,24 +80,13 @@ export default function TasteNotes() {
               aria-label="Close"
               onClick={close}
             >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-[18px] w-[18px]"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                aria-hidden
-              >
-                <path d="M6 6l12 12" />
-                <path d="M18 6L6 18" />
-              </svg>
+              <CloseIcon />
             </button>
           </div>
 
           <p className="mt-3 max-w-[44ch] text-[13.5px] leading-[1.6] text-neutral-800">
             A general guide to the flavors you might pick up in a cup,
-            independent of which bag you choose.
+            independent of which roast you choose.
           </p>
 
           <dl className="mt-6 flex flex-col gap-4">

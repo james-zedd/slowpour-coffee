@@ -1,3 +1,8 @@
+import LandscapeGraphic from "./svgs/LandscapeGraphic";
+import RainIcon from "./svgs/RainIcon";
+import SunIcon from "./svgs/SunIcon";
+import SproutIcon from "./svgs/SproutIcon";
+
 type Highlight = {
   title: string;
   body: string;
@@ -22,128 +27,11 @@ const highlights: Highlight[] = [
   },
 ];
 
-function SunIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]"
-      fill="none"
-      stroke="var(--color-accent-700)"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      role="img"
-      aria-hidden
-    >
-      <circle cx="12" cy="12" r="4.5" fill="var(--color-accent-400)" />
-      <path d="M12 2.5v3" />
-      <path d="M12 18.5v3" />
-      <path d="M2.5 12h3" />
-      <path d="M18.5 12h3" />
-      <path d="M5.5 5.5l2 2" />
-      <path d="M16.5 16.5l2 2" />
-      <path d="M18.5 5.5l-2 2" />
-      <path d="M7.5 16.5l-2 2" />
-    </svg>
-  );
-}
-
-function RainIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]"
-      fill="none"
-      stroke="var(--color-accent-2-800)"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      role="img"
-      aria-hidden
-    >
-      <path
-        d="M7 15a4 4 0 0 1 .3-8 5.5 5.5 0 0 1 10.4-1A4.5 4.5 0 0 1 17 15H7z"
-        fill="var(--color-accent-2-200)"
-      />
-      <path d="M9 19l-1 2" />
-      <path d="M13 19l-1 2" />
-      <path d="M17 19l-1 2" />
-    </svg>
-  );
-}
-
-function SproutIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]"
-      fill="none"
-      stroke="var(--color-accent-700)"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      role="img"
-      aria-hidden
-    >
-      <path d="M12 21V10" />
-      <path d="M12 10c0-4 3-7 7-7 0 4-3 7-7 7z" fill="var(--color-accent-400)" />
-      <path d="M12 14c0-3-2.5-5-6-5 0 3 2.5 5 6 5z" fill="var(--color-accent-200)" />
-    </svg>
-  );
-}
-
 const icons: Record<Highlight["icon"], () => React.JSX.Element> = {
   sun: SunIcon,
   rain: RainIcon,
   sprout: SproutIcon,
 };
-
-function LandscapeGraphic() {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      className="h-[110px] w-[110px] sm:h-[196px] sm:w-[196px]"
-      role="img"
-      aria-label="Rolling hills under a soft sun, beside the coastline"
-    >
-      <circle
-        cx="72"
-        cy="26"
-        r="10"
-        fill="var(--color-accent-400)"
-        stroke="var(--color-accent-700)"
-        strokeWidth="3.2"
-      />
-      <path
-        d="M4 70C18 42 34 42 48 60C58 48 72 48 96 68V84H4Z"
-        fill="var(--color-accent-2-200)"
-      />
-      <path
-        d="M4 84C16 64 30 64 44 78C56 66 74 66 96 84Z"
-        fill="var(--color-accent-2-500)"
-        stroke="var(--color-accent-2-800)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6 91h88"
-        fill="none"
-        stroke="var(--color-accent-700)"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M14 95h72"
-        fill="none"
-        stroke="var(--color-accent-700)"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        opacity="0.5"
-      />
-    </svg>
-  );
-}
 
 export default function Farms() {
   return (

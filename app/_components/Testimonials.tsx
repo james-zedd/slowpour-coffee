@@ -40,7 +40,7 @@ function StarRating() {
 export default function Testimonials() {
   return (
     <section id="testimonials" className="relative overflow-hidden">
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-16 sm:px-14 sm:py-24">
+      <div className="relative mx-auto w-full max-w-6xl px-6 pt-8 pb-16 sm:px-14 sm:pt-16 sm:pb-24">
         <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-accent-700 sm:text-[12.5px]">
           Testimonials
         </span>
@@ -48,7 +48,7 @@ export default function Testimonials() {
           What&apos;s landing on people&apos;s counters.
         </h2>
 
-        <div className="mt-10 flex flex-col gap-4 sm:mt-14 sm:grid sm:grid-cols-3 sm:gap-[34px]">
+        <div className="mt-10 flex flex-col gap-4 mlg:mt-14 mlg:grid mlg:grid-cols-3 mlg:gap-[34px]">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}

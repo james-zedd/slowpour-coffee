@@ -3,7 +3,7 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 const roastOptions = ["Light", "Medium", "Dark", "Extra Dark"] as const;
-const grindOptions = ["Extra Fine", "Fine", "Medium", "Coarse"] as const;
+const grindOptions = ["Extra Fine", "Fine", "Medium", "Coarse", "Whole Beans"] as const;
 const frequencyOptions = ["Weekly", "Bi-weekly", "Monthly"] as const;
 
 type Roast = (typeof roastOptions)[number];
@@ -43,45 +43,19 @@ export default function Subscribe() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 h-[260px] w-[260px] rounded-full bg-accent-2-100 sm:h-[360px] sm:w-[360px]"
+        className="pointer-events-none absolute -left-24 bottom-0 h-[260px] w-[260px] rounded-full bg-accent-2-100 sm:h-[360px] sm:w-[360px] 3xl:hidden"
       />
 
       <div className="relative mx-auto flex w-full max-w-2xl flex-col gap-10">
-        <div>
-          <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-accent-700 sm:text-[12.5px]">
-            Subscribe
-          </span>
-          <h2 className="mt-3 font-heading text-base leading-[1.2] sm:mt-4 sm:text-[22px]">
+        <div className="text-center">
+          <h2 className="font-heading text-[28px] leading-[1.08] tracking-[-0.015em] text-text sm:text-[62px] sm:leading-[1.06]">
             Start a subscription.
           </h2>
-          <p className="mt-4 max-w-[44ch] text-[13.5px] leading-[1.6] text-neutral-800 sm:text-[17px] sm:leading-[1.65]">
-            Pick a roast, tell us how you brew, and we will have a fresh bag
+          <p className="mt-4 text-[13.5px] leading-[1.6] text-neutral-800 sm:text-[17px] sm:leading-[1.65]">
+            Pick a roast, let us know your grind preference, and we will have a fresh bag
             on the counter before you run out. No contracts — pause, skip, or
             cancel whenever life gets in the way.
           </p>
-          <ul className="mt-6 flex flex-col gap-2 text-[12.5px] font-medium text-neutral-800 sm:text-[14.5px]">
-            <li className="flex items-center gap-2">
-              <span
-                aria-hidden
-                className="h-1.5 w-1.5 flex-none rounded-full bg-accent-500"
-              />
-              Free shipping on every bag
-            </li>
-            <li className="flex items-center gap-2">
-              <span
-                aria-hidden
-                className="h-1.5 w-1.5 flex-none rounded-full bg-accent-500"
-              />
-              Pause or cancel anytime
-            </li>
-            <li className="flex items-center gap-2">
-              <span
-                aria-hidden
-                className="h-1.5 w-1.5 flex-none rounded-full bg-accent-500"
-              />
-              Roasted the morning it ships
-            </li>
-          </ul>
         </div>
 
         <div className="card elev-md relative p-6 sm:p-8">
@@ -197,9 +171,12 @@ export default function Subscribe() {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary btn-block">
+              <button type="submit" className="btn btn-primary btn-block mt-3">
                 Start my subscription
               </button>
+              <p className="text-[12px] text-center tracking-[0.06em]">
+                Free shipping &middot; Pause anytime
+              </p>
             </form>
           )}
         </div>

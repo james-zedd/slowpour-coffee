@@ -2,7 +2,7 @@ export default function Nav() {
   return (
     <nav className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-5 sm:px-14">
       <span className="nav-brand flex-1">Slowpour Roasters</span>
-      <div className="hidden items-center gap-8 text-[14.5px] font-medium text-text md:flex">
+      <div className="hidden items-center gap-8 text-[14.5px] font-medium text-text lg:flex">
         <a href="#roast" className="hover:text-accent-700">
           The roast
         </a>
@@ -18,7 +18,7 @@ export default function Nav() {
       </div>
       <a
         href="#subscribe"
-        className="btn btn-primary hidden md:inline-flex"
+        className="btn btn-primary hidden lg:inline-flex"
       >
         Start a subscription
       </a>

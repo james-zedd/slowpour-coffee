@@ -38,10 +38,10 @@ export default function Farms() {
     <section id="farms" className="relative overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-28 top-1/3 h-[280px] w-[280px] rounded-full bg-accent-2-100 sm:h-[380px] sm:w-[380px]"
+        className="pointer-events-none absolute -left-28 top-1/3 h-[280px] w-[280px] rounded-full bg-accent-2-100 sm:h-[380px] sm:w-[380px] 3xl:hidden"
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-16 sm:px-14 sm:py-24">
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-8 sm:px-14 sm:py-16">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,1fr)_300px] md:gap-12">
           <div>
             <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-accent-700 sm:text-[12.5px]">
@@ -50,6 +50,9 @@ export default function Farms() {
             <h2 className="mt-3 font-heading text-base leading-[1.2] sm:mt-4 sm:text-[22px]">
               A greenhouse that never really sees a Canadian winter.
             </h2>
+            <div className="mx-auto flex h-[168px] w-[168px] items-center justify-center rounded-full bg-accent-100 sm:mx-0 sm:h-[300px] sm:w-[300px] mt-4 md:hidden">
+              <LandscapeGraphic />
+            </div>
             <p className="mt-4 max-w-[44ch] text-[13.5px] leading-[1.6] text-neutral-800 sm:text-[17px] sm:leading-[1.65]">
               Our arabica comes from a cluster of greenhouses in the
               Cowichan Valley on Vancouver Island — mild enough, most
@@ -62,7 +65,7 @@ export default function Farms() {
             </p>
           </div>
 
-          <div className="mx-auto flex h-[168px] w-[168px] items-center justify-center rounded-full bg-accent-100 sm:mx-0 sm:h-[300px] sm:w-[300px] md:justify-self-end">
+          <div className="mx-auto hidden h-[168px] w-[168px] items-center justify-center rounded-full bg-accent-100 sm:mx-0 sm:h-[300px] sm:w-[300px] md:flex md:justify-self-end">
             <LandscapeGraphic />
           </div>
         </div>
